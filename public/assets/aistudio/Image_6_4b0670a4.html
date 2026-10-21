@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container": "#e6eeff",
+          "inverse-surface": "#233144",
+          "tertiary-fixed": "#dce1ff",
+          "background": "#f8f9ff",
+          "secondary-fixed-dim": "#eec14b",
+          "secondary": "#775a00",
+          "inverse-primary": "#b0c9e8",
+          "on-tertiary-container": "#728adf",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-container": "#002069",
+          "tertiary": "#000e3b",
+          "surface-container-high": "#dde9ff",
+          "primary": "#001428",
+          "on-secondary-container": "#735700",
+          "on-surface-variant": "#43474d",
+          "surface-dim": "#ccdbf4",
+          "on-secondary-fixed": "#251a00",
+          "secondary-container": "#fece57",
+          "on-tertiary-fixed": "#00164e",
+          "surface-container-low": "#eff4ff",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-tint": "#49607c",
+          "on-background": "#0d1c2f",
+          "primary-container": "#0f2942",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "surface": "#f8f9ff",
+          "surface-variant": "#d5e3fd",
+          "on-primary-fixed": "#011d35",
+          "on-primary-container": "#7991af",
+          "outline-variant": "#c3c6ce",
+          "error-container": "#ffdad6",
+          "on-surface": "#0d1c2f",
+          "surface-bright": "#f8f9ff",
+          "on-primary": "#ffffff",
+          "inverse-on-surface": "#ebf1ff",
+          "on-error-container": "#93000a",
+          "secondary-fixed": "#ffdf98",
+          "on-secondary": "#ffffff",
+          "surface-container-highest": "#d5e3fd",
+          "on-primary-fixed-variant": "#314863",
+          "outline": "#74777e",
+          "primary-fixed-dim": "#b0c9e8",
+          "tertiary-fixed-dim": "#b6c4ff",
+          "on-tertiary-fixed-variant": "#264191",
+          "primary-fixed": "#d1e4ff",
+          "on-tertiary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "data-tabular": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "data-tabular": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,41,66,0.06)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between text-label-sm font-label-sm"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-sm font-body-sm">call</span><span>+91 7989922049</span></div><div class="hidden sm:flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-sm font-body-sm">mail</span><span>staconsultancyservices@gmail.com</span></div></div><div class="flex items-center gap-space-md"><span class="text-surface-variant font-label-sm text-label-sm">Proprietor: Afrid Syed</span><span class="hidden md:inline-block text-outline-variant">|</span><span class="hidden md:inline-block text-secondary-fixed font-label-sm text-label-sm">Direct Tax &amp; GST Advisory</span></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="STA Consultancy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB713DPaZ-qJD2ugynykl__jlq106ovHyKXM52xV3-9N6QK58kZzY4dftXghGWhC0QomYeTyiE28mifQ5WcPqye5m0bhZH30TSH_miTLDbvN6ZEHVl_l5EyPPuU2TLT9w3UhpT4sR-jh1g1s266pYyffUlg9tujAasGJsI2caNyo1CGtGzX-yJn2eTosbnT5mHAPp-u1VcP0vKK1CuQTvWYzkbcDvqJP60LISQpjM3h0zJBtRkckgkD"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">STA Consultancy</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Tax &amp; Compliance Advisory</span></div></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-primary font-label-lg rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-primary font-label-lg rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="services" href="#">Service</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="insights" href="#">Insights</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center px-space-lg py-2.5 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-primary transition-colors shadow-[0_1px_3px_0_rgba(15,41,66,0.08)]" data-path="consultation-booking" href="#">Get Tax Consultation</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQFtNPEv6BWkQpzHifXODTyQ8-tTS3yFi4hbBfbX8zGWWz1CSg7T9VmG2Im8xqgBjFte30pQVGnmCBHaRktp6yns2USgenCFdZ5eLZ3rSDw4-AfU20xSYaYcMwRgEeP628sZuXsG8Yr0LNki7PyXcGOQwFi4vX3UJtoW6rVByty5dkRGEAKPyD8RbAx8_W4lr1ddJl5SrE4B_LUoWru6Jgx6iPNxuoR3fb-F7m_AoeliXSTmwJ6pF"/></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Sovereign Brand Trust Bar -->
+<section class="w-full bg-surface-container-high py-space-sm px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg shadow-sm font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+          Authorised Tax Advisory
+        </span>
+<span class="text-on-surface-variant font-label-md text-label-md hidden sm:inline">Lead Fiduciary Desk: Afrid Syed</span>
+</div>
+<div class="flex items-center gap-space-lg text-on-surface-variant font-data-tabular text-data-tabular">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-body-md" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm">CBDT &amp; CBIC Framework Compliance</span>
+</div>
+<div class="hidden md:flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-secondary text-body-md">lock</span>
+<span class="font-label-sm text-label-sm">256-Bit Encrypted Data Flow</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Copy & CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 bg-surface-container-lowest text-primary rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-body-md" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<span class="font-label-md text-label-md tracking-wide uppercase text-on-surface">Precision Direct Tax &amp; GST Advisory</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold leading-tight tracking-tight">
+          Expert Tax, GST &amp; Financial Advisory for Individuals and Businesses Across India
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Streamlining Income Tax returns, GST filings, TDS/TCS compliance, Payroll (PF, PT, ESI), and corporate bookkeeping with precision and zero hassle. Backed by institutional rigor under proprietor Afrid Syed.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-md hover:bg-primary transition-all duration-200" href="#consultation-booking">
+<span>Schedule Free Consultation</span>
+<span class="material-symbols-outlined text-body-md">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 bg-surface-container-lowest text-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-surface-container-low transition-all duration-200" href="#services-grid">
+<span>Explore All Services</span>
+<span class="material-symbols-outlined text-body-md text-secondary">tune</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md">
+<div class="flex items-center gap-2 p-2.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-body-md" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">100% Timely Filing</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-body-md" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">End-to-End Audit</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-body-md" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Fixed Pricing</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-body-md" style="font-variation-settings: 'FILL' 1;">badge</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Dedicated Desk</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Showcase & Active Compliance Ledger Card -->
+<div class="lg:col-span-5 relative">
+<div class="relative bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary leading-tight">Live Ledger Status</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">FY 2024-25 • Q4 Statutory Track</p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm rounded-lg uppercase font-semibold">Audited</span>
+</div>
+<!-- Mini Visual Sparkline / Activity Graph -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span>Filing Volume &amp; Audit Velocity</span>
+<span class="text-secondary font-semibold font-data-tabular">99.8% Clearance</span>
+</div>
+<!-- SVG Progress Vector -->
+<svg class="w-full h-16 text-primary" fill="none" viewbox="0 0 320 64">
+<path d="M0,48 C30,42 60,54 90,32 C120,10 150,28 180,20 C210,12 240,36 270,16 C290,4 310,8 320,6" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0,48 C30,42 60,54 90,32 C120,10 150,28 180,20 C210,12 240,36 270,16 C290,4 310,8 320,6 L320,64 L0,64 Z" fill="currentColor" fill-opacity="0.08"></path>
+<circle class="fill-secondary-container" cx="270" cy="16" r="4"></circle>
+<circle class="fill-primary" cx="320" cy="6" r="4"></circle>
+</svg>
+</div>
+<!-- Real-Time Metrics Rows -->
+<div class="flex flex-col gap-space-xs font-data-tabular text-data-tabular">
+<div class="flex items-center justify-between p-2.5 bg-surface rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-body-md">description</span>
+<span class="font-body-sm text-body-sm text-on-surface">ITR Verification Engine</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">100% Cleared</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-body-md">chevron_forward</span>
+<span class="font-body-sm text-body-sm text-on-surface">GSTR-1 &amp; 3B Reconciliation</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Automated</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-body-md">payments</span>
+<span class="font-body-sm text-body-sm text-on-surface">TDS 24Q / 26Q Status</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Zero Default</span>
+</div>
+</div>
+<!-- Practitioner Endorsement Callout -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<img alt="Afrid Syed" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQFtNPEv6BWkQpzHifXODTyQ8-tTS3yFi4hbBfbX8zGWWz1CSg7T9VmG2Im8xqgBjFte30pQVGnmCBHaRktp6yns2USgenCFdZ5eLZ3rSDw4-AfU20xSYaYcMwRgEeP628sZuXsG8Yr0LNki7PyXcGOQwFi4vX3UJtoW6rVByty5dkRGEAKPyD8RbAx8_W4lr1ddJl5SrE4B_LUoWru6Jgx6iPNxuoR3fb-F7m_AoeliXSTmwJ6pF"/>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Afrid Syed</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Proprietor &amp; Tax Consultant</p>
+</div>
+</div>
+<a class="p-2 bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-colors" href="tel:7989922049">
+<span class="material-symbols-outlined text-body-md">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Stats Bar -->
+<section class="w-full bg-primary-container text-on-primary py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-[1320px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center md:text-left">
+<div class="flex flex-col gap-1 p-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-bold font-data-tabular">1,500+</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright font-medium">Returns Filed</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Individuals, HUFs, &amp; Pvt Ltd</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-bold font-data-tabular">99.8%</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright font-medium">On-Time Compliance</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Zero Late Fee Record</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-bold font-data-tabular">250+</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright font-medium">Corporate Clients</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Retained Monthly Retainers</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-bold font-data-tabular">10+</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright font-medium">Years Excellence</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Deep Direct &amp; Indirect Tax</span>
+</div>
+</div>
+</section>
+<!-- Core Services Highlight Grid -->
+<section class="w-full py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin bg-surface" id="services-grid">
+<div class="max-w-[1320px] mx-auto flex flex-col gap-space-xl">
+<!-- Section Title Area -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="max-w-2xl flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-secondary font-bold uppercase tracking-wider">Practice Disciplines</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">End-to-End Statutory Compliance &amp; Advisory</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Full-spectrum taxation and regulatory management designed for high-net-worth professionals, fast-scaling startups, retail establishments, and industrial enterprises.
+          </p>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-md py-2.5 bg-surface-container-high text-primary font-label-md text-label-md rounded-lg self-start md:self-auto hover:bg-surface-variant transition-colors" href="#consultation-booking">
+<span>Book Specific Assessment</span>
+<span class="material-symbols-outlined text-body-sm">north_east</span>
+</a>
+</div>
+<!-- Bento-style Service Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Service Card 1: Income Tax -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Income Tax Filing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Complete computation and filing across ITR-1 to ITR-7. Strategic deductions optimization under New vs. Old Tax Regime for Salaried Employees, HUFs, Partnership Firms, and Corporate entities.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">ITR 1-7 Coverage</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Capital Gains Advisory</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Notice Scrutiny</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>File Income Tax</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2: GST Registration & Returns -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">GST Compliance &amp; Filings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Prompt multi-state GST registration, regular monthly/quarterly filings (GSTR-1, GSTR-3B), annual audits (GSTR-9/9C), and thorough 2B/ITC reconciliation to eliminate leakage.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">GSTR-1 &amp; 3B Routine</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">ITC Reconciliation</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">E-Invoicing &amp; E-Way Bills</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>Manage GST Account</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3: TDS & TCS Compliances -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">TDS &amp; TCS Compliances</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Quarterly statutory returns preparation (Form 24Q for salaries, 26Q for vendor payments, 27EQ for TCS). Timely challan validation and streamlined generation of Form 16 / 16A certificates.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Form 24Q / 26Q</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Form 16/16A Desk</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Challan 281 Payment</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>Resolve TDS Withholding</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4: Payroll & Statutory Compliance -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Payroll &amp; Statutory Register</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Complete labor law and employee payroll compliance: EPF / Employees' Provident Fund filings, ESI contributions, Professional Tax (PT) deductibles, and automated monthly salary pay slips.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">EPF &amp; ESI Monthly ECR</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">PT Registration</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Monthly Wage Sheets</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>Setup Corporate Payroll</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 5: Bookkeeping & Corporate Accounting -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Bookkeeping &amp; Accounting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Professional ledger maintenance across cloud tools like TallyPrime, Zoho Books, and QuickBooks. Regular bank reconciliations, monthly Profit &amp; Loss statements, and Year-End Balance Sheets.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Tally &amp; Zoho Cloud</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Bank Reconciliation</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">P&amp;L and Balance Sheet</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>Outsource Bookkeeping</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 6: Notice Handling & Tax Litigation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Tax Notice &amp; Dispute Resolution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Expert drafting of representations against Income Tax notices (Section 143(1), 148, 139(9) defective filings) and GST scrutiny queries under Section 61, backed by senior fiduciary counsel.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">143(1) &amp; 148 Responses</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">GST ASMT-10 Reply</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm rounded">Faceless Appeal Drafting</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#consultation-booking">
+<span>Respond to Notice</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo-Rich Section: Modern Corporate Environment -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6 relative">
+<div class="rounded-xl overflow-hidden shadow-lg aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional Indian tax and audit advisory office in Hyderabad. A knowledgeable senior tax consultant in executive formal attire reviews complex corporate balance sheets with clean financial charts on dual widescreen displays. Daylight streaming through large glass windows onto an organized mahogany desk, conveying institutional trust and modern financial rigor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyk2hymD4bgc4CUvyleQbQllCauovTk_yuqkxldChdI_lzYpv5vC6y0PYZeXaa8ZOQDH38IHHLRqeT7kCCX8BbY-YtQbWykDR4ZX2G9Dktp5khLo0W-5HzLpLo3s7Byjcc2Zu8P3m2A4dFZ94hJcXBfbiQOL1xsmf6CJC72BmtkTq1g22ppBa21kdYvgv7wuk5miCllQ6dsQRMvtVgGgpSaKrr0LkiSJCeBqH_F-eqYJS0tHEMJTfT"/>
+</div>
+<!-- Overlapping floating stats badge -->
+<div class="absolute -bottom-6 -right-4 bg-surface-container-lowest p-space-md rounded-xl shadow-xl hidden sm:flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">100% Validated</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Statutory Return Checklists</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-lg text-label-lg text-secondary font-bold uppercase tracking-wider">Institutional Rigor</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold leading-tight">
+          Financial Advisory Grounded in Accuracy and Discretion
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          At STA Consultancy, tax computation is treated as an exact science. Whether structuring employee salaries to optimize net take-home pay, resolving multi-year GST mismatches, or maintaining flawless bookkeeping for private limited corporations, our methodology eliminates liability risks.
+        </p>
+<!-- Feature Points -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-start gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary text-body-md mt-0.5">verified_user</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Strict Privacy Protocols</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Non-disclosure guaranteed on corporate books and assets.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary text-body-md mt-0.5">notifications_active</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Pre-Deadline Pings</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated SMS/Email reminders well ahead of cut-off dates.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary text-body-md mt-0.5">analytics</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Tax Savings Insights</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Proactive regime modeling tailored to your income profile.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary text-body-md mt-0.5">support_agent</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Direct Consultant Access</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Speak straight to Afrid Syed without call-center delays.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose STA Consultancy -->
+<section class="w-full py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin bg-surface">
+<div class="max-w-[1320px] mx-auto flex flex-col gap-space-xl">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-secondary font-bold uppercase tracking-wider">The STA Advantage</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Why Partner with Afrid Syed &amp; STA Consultancy?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We bridge the gap between complex tax laws and your business objectives, delivering high-touch advisory with corporate precision.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">100% Confidentiality</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Your proprietary business metrics, balance sheets, and personal income profiles remain securely sealed under fiduciary non-disclosure.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rule</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Proactive Audit Defense</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every return is audited twice before submission. In case of inquiries, our office drafts and represents comprehensive statutory replies.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">alarm_on</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Automated Deadline Triggers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Never miss GSTR-3B on the 20th, TDS deposits on the 7th, or annual filings. Our system pings and organizes vouchers weeks in advance.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">price_check</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Transparent Billing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Zero hidden surcharges. Enjoy clear, agreed-upon service retainers for bookkeeping and fixed quotes for annual tax packages.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials & Trust Reviews -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-[1320px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-lg text-label-lg text-secondary font-bold uppercase tracking-wider">Client Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Trusted by Businesses &amp; Professionals</h2>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold ml-1">4.9 / 5.0</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "As a Principal Architect working with foreign client remittances and stock options, filing taxes was an intimidating nightmare. Afrid Syed simplified Section 44ADA computations and saved me substantial capital gains tax legally."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary font-headline-sm">
+              RK
+            </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold">Rohit Kulkarni</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Lead Solutions Architect • Bengaluru</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "STA Consultancy took full charge of our retail chain's monthly GST filings and payroll calculations. We haven't had a single late fee or notice in the past 3 years. Afrid's direct accessibility makes all the difference."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary font-headline-sm">
+              MA
+            </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold">Mohammed Arif</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Director, Deccan Retail Logistics</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Our engineering manufacturing unit faced an intricate TDS discrepancy and GST input mismatch. The STA advisory desk audited our registers, filed corrective statements, and cleared our audit report seamlessly."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary font-headline-sm">
+              VS
+            </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold">Venkatesh S.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Managing Partner, Precision Auto Tools</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Consultation Booking & Inquiry Section -->
+<section class="w-full py-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin bg-surface" id="consultation-booking">
+<div class="max-w-[1320px] mx-auto bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Advisory Details Panel -->
+<div class="lg:col-span-5 bg-primary p-space-xl text-on-primary flex flex-col justify-between gap-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-surface-bright rounded-lg self-start">
+<span class="material-symbols-outlined text-secondary-container text-body-sm">contact_phone</span>
+<span class="font-label-sm text-label-sm">Instant Response Desk</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-surface-bright leading-tight">
+              Initiate Your Fiduciary Tax Review
+            </h3>
+<p class="font-body-md text-body-md text-surface-variant leading-relaxed">
+              Connect directly with Afrid Syed. Whether dealing with a pending deadline, notice query, or planning annual business bookkeeping, get verified solutions within hours.
+            </p>
+</div>
+<!-- Contact Touchpoints -->
+<div class="flex flex-col gap-space-md">
+<a class="flex items-start gap-3 p-space-sm bg-primary-container rounded-lg hover:bg-surface-tint/20 transition-colors" href="tel:7989922049">
+<span class="material-symbols-outlined text-secondary-container text-headline-sm">phone_iphone</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Proprietor Direct Line</p>
+<p class="font-headline-sm text-headline-sm font-data-tabular text-surface-bright">+91 7989922049</p>
+</div>
+</a>
+<a class="flex items-start gap-3 p-space-sm bg-primary-container rounded-lg hover:bg-surface-tint/20 transition-colors" href="mailto:staconsultancyservices@gmail.com">
+<span class="material-symbols-outlined text-secondary-container text-headline-sm">mail</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Official Inquiries &amp; Documents</p>
+<p class="font-body-md text-body-md font-data-tabular text-surface-bright break-all">staconsultancyservices@gmail.com</p>
+</div>
+</a>
+<div class="flex items-start gap-3 p-space-sm bg-primary-container rounded-lg">
+<span class="material-symbols-outlined text-secondary-container text-headline-sm">location_on</span>
+<div>
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Advisory Chambers</p>
+<p class="font-body-md text-body-md text-surface-bright">Pan-India Virtual Advisory &amp; Physical Desk</p>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-tint/10 rounded-lg">
+<p class="font-label-sm text-label-sm text-surface-variant">
+              Advising under legal practitioner confidentiality. Documents transmitted through secure channels.
+            </p>
+</div>
+</div>
+<!-- Right Inquiry Form -->
+<div class="lg:col-span-7 p-space-xl flex flex-col justify-center">
+<form class="flex flex-col gap-space-md" id="taxInquiryForm" onsubmit="event.preventDefault(); showFormConfirmation();">
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-md text-headline-md text-primary font-bold">Request a Strategic Callback</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fill in your requirements. Afrid Syed will review and get in touch directly.</p>
+</div>
+<!-- Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-semibold" for="clientName">Full Name / Company Representative *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="clientName" placeholder="e.g. Afrid Syed / Rajesh Mehta" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-semibold" for="clientPhone">Direct Phone / WhatsApp Number *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="clientPhone" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-semibold" for="clientEmail">Email Address *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="clientEmail" placeholder="your.name@domain.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-semibold" for="serviceCategory">Primary Service Needed *</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="serviceCategory" required="">
+<option disabled="" selected="" value="">Select practice domain</option>
+<option value="itr">Income Tax Filing &amp; Regime Strategy</option>
+<option value="gst">GST Registration &amp; Monthly Returns</option>
+<option value="tds">TDS / TCS 24Q/26Q Compliance</option>
+<option value="payroll">Payroll (EPF, ESI, PT) Management</option>
+<option value="bookkeeping">Corporate Bookkeeping &amp; P&amp;L</option>
+<option value="notice">Tax Notice / Scrutiny Resolution</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-semibold" for="clientMessage">Brief Scope of Inquiry / Annual Turnover (Optional)</label>
+<textarea class="w-full px-3.5 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary resize-none" id="clientMessage" placeholder="Provide details regarding pending filings, corporate turnover bracket, or statutory queries..." rows="3"></textarea>
+</div>
+<button class="w-full py-3.5 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-body-md">lock</span>
+<span>Submit Secure Inquiry to Afrid Syed</span>
+</button>
+<div class="hidden p-space-md bg-surface-container text-primary rounded-lg flex items-center gap-2" id="formSuccessMessage">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold">Thank you. Your consultation request has been dispatched. Afrid Syed will connect with you promptly.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Script for Form Micro-Interaction -->
+<script>
+    function showFormConfirmation() {
+      const msg = document.getElementById('formSuccessMessage');
+      if (msg) {
+        msg.classList.remove('hidden');
+        const form = document.getElementById('taxInquiryForm');
+        if (form) {
+          const btn = form.querySelector('button[type="submit"]');
+          if (btn) {
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            btn.innerHTML = '<span class="material-symbols-outlined">done</span> Transmitted Successfully';
+          }
+        }
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-xl pb-space-lg"><div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-primary-container"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm mb-space-xs"><img alt="STA Consultancy Logo" class="h-8 w-auto object-contain brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB713DPaZ-qJD2ugynykl__jlq106ovHyKXM52xV3-9N6QK58kZzY4dftXghGWhC0QomYeTyiE28mifQ5WcPqye5m0bhZH30TSH_miTLDbvN6ZEHVl_l5EyPPuU2TLT9w3UhpT4sR-jh1g1s266pYyffUlg9tujAasGJsI2caNyo1CGtGzX-yJn2eTosbnT5mHAPp-u1VcP0vKK1CuQTvWYzkbcDvqJP60LISQpjM3h0zJBtRkckgkD"/><span class="font-headline-sm text-headline-sm text-surface-bright">STA Consultancy</span></div><p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Fiduciary tax planning, institutional statutory audits, and end-to-end GST compliance tailored for enterprises, proprietorships, and high-net-worth individuals.</p><div class="mt-space-sm bg-primary-container p-space-sm rounded-lg border-l-2 border-secondary-container"><p class="font-label-sm text-label-sm text-secondary-fixed">Proprietorship Authority</p><p class="font-label-lg text-label-lg text-surface-bright">Prop: Afrid Syed</p></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Core Practice Areas</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li><a class="hover:text-surface-bright transition-colors" data-path="income-tax-advisory" href="#">Income Tax Filing &amp; Litigation</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="gst-compliance" href="#">GST Registration &amp; Returns</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="tds-tcs-provisions" href="#">TDS &amp; TCS Statutory Filing</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="payroll-accounting" href="#">Payroll &amp; Statutory Registers</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="corporate-bookkeeping" href="#">Ledger &amp; Corporate Bookkeeping</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Contact Touchpoints</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">call</span><div><p class="text-surface-bright font-data-tabular text-data-tabular">7989922049</p><p class="font-label-sm text-label-sm text-outline-variant">Direct Advisory Desk</p></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">mail</span><div><p class="text-surface-bright font-data-tabular text-data-tabular">staconsultancyservices@gmail.com</p><p class="font-label-sm text-label-sm text-outline-variant">Confidential Documentation Desk</p></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">schedule</span><div><p class="text-surface-bright font-body-sm text-body-sm">Mon - Sat: 09:30 AM - 07:00 PM</p><p class="font-label-sm text-label-sm text-outline-variant">Sunday: Statutory Deadlines Priority</p></div></div></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Regulatory Status</h4><p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Registered Indian Tax Practitioner advisory operations adhering to CBDT &amp; CBIC guidelines. High-security data transmission enabled.</p><div class="mt-space-xs"><a class="w-full text-center inline-block py-2.5 px-space-md bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg hover:bg-secondary-fixed transition-colors font-semibold" data-path="consultation-booking" href="#">Schedule Consultation</a></div></div></div><div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-label-sm text-label-sm text-outline-variant text-center md:text-left">© 2025 STA Consultancy. All Rights Reserved. Proprietary Practice: Afrid Syed. Financial figures subject to statutory revision under the Income Tax Act, 1961.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm text-surface-variant"><a class="hover:text-surface-bright transition-colors" data-path="statutory-disclaimer" href="#">Disclaimer</a><span class="text-outline-variant">•</span><a class="hover:text-surface-bright transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-outline-variant">•</span><a class="hover:text-surface-bright transition-colors" data-path="terms-of-engagement" href="#">Terms of Engagement</a></div></div></footer></body></html>

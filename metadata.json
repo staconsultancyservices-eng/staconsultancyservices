@@ -1,0 +1,6 @@
+{
+  "name": "Aura Crypto Tracking Dashboard",
+  "description": "Ultra-premium, modern dark aesthetic multi-screen mobile crypto tracking dashboard featuring portfolio metrics, SOL analytics with 7-day curved financial charts, and a real-time market news feed.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container": "#e6eeff",
+          "inverse-surface": "#233144",
+          "tertiary-fixed": "#dce1ff",
+          "background": "#f8f9ff",
+          "secondary-fixed-dim": "#eec14b",
+          "secondary": "#775a00",
+          "inverse-primary": "#b0c9e8",
+          "on-tertiary-container": "#728adf",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-container": "#002069",
+          "tertiary": "#000e3b",
+          "surface-container-high": "#dde9ff",
+          "primary": "#001428",
+          "on-secondary-container": "#735700",
+          "on-surface-variant": "#43474d",
+          "surface-dim": "#ccdbf4",
+          "on-secondary-fixed": "#251a00",
+          "secondary-container": "#fece57",
+          "on-tertiary-fixed": "#00164e",
+          "surface-container-low": "#eff4ff",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-tint": "#49607c",
+          "on-background": "#0d1c2f",
+          "primary-container": "#0f2942",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "surface": "#f8f9ff",
+          "surface-variant": "#d5e3fd",
+          "on-primary-fixed": "#011d35",
+          "on-primary-container": "#7991af",
+          "outline-variant": "#c3c6ce",
+          "error-container": "#ffdad6",
+          "on-surface": "#0d1c2f",
+          "surface-bright": "#f8f9ff",
+          "on-primary": "#ffffff",
+          "inverse-on-surface": "#ebf1ff",
+          "on-error-container": "#93000a",
+          "secondary-fixed": "#ffdf98",
+          "on-secondary": "#ffffff",
+          "surface-container-highest": "#d5e3fd",
+          "on-primary-fixed-variant": "#314863",
+          "outline": "#74777e",
+          "primary-fixed-dim": "#b0c9e8",
+          "tertiary-fixed-dim": "#b6c4ff",
+          "on-tertiary-fixed-variant": "#264191",
+          "primary-fixed": "#d1e4ff",
+          "on-tertiary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "data-tabular": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "data-tabular": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,41,66,0.06)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile md:px-margin-tablet lg:px-margin"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between text-label-sm font-label-sm"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-sm font-body-sm">call</span><span>+91 7989922049</span></div><div class="hidden sm:flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-sm font-body-sm">mail</span><span>staconsultancyservices@gmail.com</span></div></div><div class="flex items-center gap-space-md"><span class="text-surface-variant font-label-sm text-label-sm">Proprietor: Afrid Syed</span><span class="hidden md:inline-block text-outline-variant">|</span><span class="hidden md:inline-block text-secondary-fixed font-label-sm text-label-sm">Direct Tax &amp; GST Advisory</span></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="STA Consultancy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB713DPaZ-qJD2ugynykl__jlq106ovHyKXM52xV3-9N6QK58kZzY4dftXghGWhC0QomYeTyiE28mifQ5WcPqye5m0bhZH30TSH_miTLDbvN6ZEHVl_l5EyPPuU2TLT9w3UhpT4sR-jh1g1s266pYyffUlg9tujAasGJsI2caNyo1CGtGzX-yJn2eTosbnT5mHAPp-u1VcP0vKK1CuQTvWYzkbcDvqJP60LISQpjM3h0zJBtRkckgkD"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">STA Consultancy</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Tax &amp; Compliance Advisory</span></div></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-primary font-label-lg rounded-lg"><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="services" href="#">Service</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-primary font-label-lg rounded-lg" data-path="insights" href="#">Insights</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center px-space-lg py-2.5 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-primary transition-colors shadow-[0_1px_3px_0_rgba(15,41,66,0.08)]" data-path="consultation-booking" href="#">Get Tax Consultation</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQFtNPEv6BWkQpzHifXODTyQ8-tTS3yFi4hbBfbX8zGWWz1CSg7T9VmG2Im8xqgBjFte30pQVGnmCBHaRktp6yns2USgenCFdZ5eLZ3rSDw4-AfU20xSYaYcMwRgEeP628sZuXsG8Yr0LNki7PyXcGOQwFi4vX3UJtoW6rVByty5dkRGEAKPyD8RbAx8_W4lr1ddJl5SrE4B_LUoWru6Jgx6iPNxuoR3fb-F7m_AoeliXSTmwJ6pF"/></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Sovereign Institutional Banner -->
+<section class="relative w-full bg-primary text-on-primary py-space-xl overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-tertiary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 bottom-0 w-80 h-80 rounded-full bg-secondary/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl space-y-space-sm">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded bg-primary-container text-secondary-fixed text-label-sm font-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">policy</span>
+<span>Statutory Knowledge Base • FY 2024–25 / AY 2025–26</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-surface-bright tracking-tight">
+            Tax, GST &amp; Regulatory Insights &amp; Updates
+          </h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl leading-relaxed">
+            Stay updated with India's evolving financial regulations, compliance calendars, budget notifications, and practical tax-saving strategies curated by <span class="text-surface-bright font-semibold">Proprietor Afrid Syed</span>.
+          </p>
+</div>
+<!-- Quick Advisory Dispatch Counter -->
+<div class="flex flex-col sm:flex-row gap-space-md p-space-md bg-primary-container rounded-lg shadow-sm">
+<div class="flex items-center gap-space-sm pr-space-md sm:border-r border-outline/20">
+<span class="material-symbols-outlined text-secondary-container text-headline-md">event_available</span>
+<div>
+<p class="font-label-sm text-label-sm text-surface-variant uppercase">Current Cycle</p>
+<p class="font-headline-sm text-headline-sm text-surface-bright">Q4 Statutory</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-headline-md">support_agent</span>
+<div>
+<p class="font-label-sm text-label-sm text-surface-variant uppercase">Direct Advisory</p>
+<p class="font-data-tabular text-data-tabular text-surface-bright font-semibold">+91 7989922049</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Financial Compliance Calendar Section -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Regulatory Deadlines</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Financial Compliance Calendar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Active CBDT, CBIC, and Ministry of Labour deadlines for the ongoing statutory month.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-lowest text-primary border border-outline-variant rounded hover:bg-surface-container transition-colors shadow-sm font-label-lg text-label-lg" id="downloadCalendarBtn">
+<span class="material-symbols-outlined text-primary text-[18px]">sim_card_download</span>
+<span>Download Monthly Compliance Calendar (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Calendar Strip Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Date 07 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md hover:-translate-y-0.5">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">07<span class="font-label-sm text-label-sm text-outline uppercase align-top">th</span></span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-on-error-container font-semibold uppercase">High Priority</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">TDS / TCS Payment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statutory deposit of Tax Deducted/Collected at Source under Chapter XVII-B for preceding month.</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Challan ITNS 281</span>
+<span class="text-error font-medium">Interest u/s 201(1A)</span>
+</div>
+</div>
+<!-- Date 11 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md hover:-translate-y-0.5">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">11<span class="font-label-sm text-label-sm text-outline uppercase align-top">th</span></span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-primary font-semibold uppercase">CBIC Portal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">GSTR-1 Monthly</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statement of outward supplies for registered taxpayers with aggregate turnover &gt; ₹5 Crores.</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Rule 59(6) GSTR lock</span>
+<span class="text-secondary font-medium">B2B ITC impact</span>
+</div>
+</div>
+<!-- Date 15 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md hover:-translate-y-0.5">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">15<span class="font-label-sm text-label-sm text-outline uppercase align-top">th</span></span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-primary font-semibold uppercase">Dual Remittance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Advance Tax &amp; PF/ESI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statutory PF and ESI contributions remittance alongside quarter-specific advance tax installments.</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>ECR Submission</span>
+<span class="text-on-surface-variant font-medium">Sec 234C applicability</span>
+</div>
+</div>
+<!-- Date 20 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md hover:-translate-y-0.5">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">20<span class="font-label-sm text-label-sm text-outline uppercase align-top">th</span></span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold uppercase">Reconciliation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">GSTR-3B Monthly</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Summary return and payment of tax liability following GSTR-2B Input Tax Credit reconciliation.</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Rule 36(4) Stricture</span>
+<span class="text-error font-medium">Sec 50(1) 18% p.a.</span>
+</div>
+</div>
+<!-- Date 31 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between transition-all hover:shadow-md hover:-translate-y-0.5">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary">31<span class="font-label-sm text-label-sm text-outline uppercase align-top">st</span></span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container text-on-primary-fixed-variant font-semibold uppercase">Quarterly Close</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Quarterly TDS Filing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Submission of Form 24Q (Salaries) &amp; 26Q (Non-Salaries) with detailed PAN &amp; Challan mapping.</p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>TRACES Validation</span>
+<span class="text-error font-medium">₹200/day Sec 234E</span>
+</div>
+</div>
+</div>
+<!-- Trust Strip Inset Notification -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">STA Compliance Desk:</span> Dates indicated follow standard notifications. State-specific professional tax (PT) dates may vary across Telangana, AP, Karnataka, and Maharashtra.
+          </p>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-1 shrink-0" href="tel:7989922049">
+<span>Clarify Statutory Notice</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Tax Calculator Section -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="bg-primary text-on-primary rounded-xl overflow-hidden shadow-xl p-space-lg md:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Calculator Inputs -->
+<div class="lg:col-span-5 space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Diagnostic Computation</span>
+<h2 class="font-headline-lg text-headline-lg text-surface-bright mt-1">Old vs New Tax Regime Estimator</h2>
+<p class="font-body-sm text-body-sm text-surface-variant mt-2">
+                Evaluate your personal tax liability under Section 115BAC versus the traditional deduction-driven Old Regime for Assessment Year 2025–26.
+              </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<label class="block font-label-md text-label-md text-surface-variant mb-1" for="grossSalary">
+                  Gross Annual Income (₹)
+                </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-surface-variant font-data-tabular">₹</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-primary-container text-surface-bright rounded text-data-tabular font-data-tabular outline-none focus:ring-2 focus:ring-secondary-fixed" id="grossSalary" step="25000" type="number" value="1500000"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-surface-variant mb-1" for="sec80C">
+                    80C Deductions (Max ₹1.5L)
+                  </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-surface-variant font-data-tabular">₹</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-primary-container text-surface-bright rounded text-data-tabular font-data-tabular outline-none focus:ring-2 focus:ring-secondary-fixed" id="sec80C" max="150000" step="10000" type="number" value="150000"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-surface-variant mb-1" for="sec80D">
+                    80D Mediclaim (₹)
+                  </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-surface-variant font-data-tabular">₹</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-primary-container text-surface-bright rounded text-data-tabular font-data-tabular outline-none focus:ring-2 focus:ring-secondary-fixed" id="sec80D" step="5000" type="number" value="25000"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-surface-variant mb-1" for="hraHomeLoan">
+                  HRA Exemption / Housing Loan Interest (₹)
+                </label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-surface-variant font-data-tabular">₹</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-primary-container text-surface-bright rounded text-data-tabular font-data-tabular outline-none focus:ring-2 focus:ring-secondary-fixed" id="hraHomeLoan" step="10000" type="number" value="120000"/>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-outline-variant pt-2">
+                *Includes standard deduction of ₹50,000 (Old) and ₹75,000 (New) as revised under Finance (No. 2) Act 2024. Includes 4% Health &amp; Education Cess.
+              </p>
+</div>
+</div>
+<!-- Right: Interactive Output & Comparison -->
+<div class="lg:col-span-7 flex flex-col justify-between bg-primary-container p-space-lg rounded-lg shadow-inner">
+<div>
+<div class="flex items-center justify-between pb-space-md border-b border-outline/20">
+<div>
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase font-medium">Optimal Selection</p>
+<h3 class="font-headline-md text-headline-md text-surface-bright" id="recommendationTitle">Analyzing Regimes...</h3>
+</div>
+<div class="px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded font-semibold uppercase" id="savingsBadge">
+                  Comparing
+                </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md my-space-lg">
+<!-- Old Regime Card -->
+<div class="p-space-md bg-primary rounded-lg space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-surface-variant">Old Tax Regime</span>
+<span class="text-label-sm font-label-sm text-outline-variant">With Deductions</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-surface-bright font-data-tabular" id="oldTaxAmount">₹0</div>
+<p class="font-label-sm text-label-sm text-surface-variant" id="oldTaxableIncome">Taxable: ₹0</p>
+</div>
+<!-- New Regime Card -->
+<div class="p-space-md bg-primary rounded-lg space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-secondary-fixed">New Tax Regime</span>
+<span class="text-label-sm font-label-sm text-secondary-container">Sec 115BAC</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-surface-bright font-data-tabular" id="newTaxAmount">₹0</div>
+<p class="font-label-sm text-label-sm text-surface-variant" id="newTaxableIncome">Taxable: ₹0</p>
+</div>
+</div>
+<!-- Inline Analytical Bar Chart Comparison -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between text-label-sm font-label-sm text-surface-variant">
+<span>Relative Tax Outgo Burden</span>
+<span class="text-secondary-fixed font-semibold" id="savingsDifferential">Differential: ₹0</span>
+</div>
+<div class="w-full bg-primary h-3 rounded-full overflow-hidden flex">
+<div class="bg-outline-variant h-full transition-all duration-500" id="barOldRegime" style="width: 50%;"></div>
+<div class="bg-secondary-fixed h-full transition-all duration-500" id="barNewRegime" style="width: 50%;"></div>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-outline-variant">
+<span>Grey: Old Regime</span>
+<span>Gold: New Regime</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-surface-variant">
+                Need enterprise salary structuring or business profit extraction advice?
+              </p>
+<a class="px-space-md py-2 bg-secondary-container text-on-secondary-container rounded font-label-md text-label-md hover:bg-secondary-fixed transition-colors shrink-0" href="tel:7989922049">
+                Consult Afrid Syed
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Advisory Articles & In-Depth Guides Section -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin space-y-space-xl">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Technical Bulletins</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Featured Advisory Articles &amp; Case Studies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Detailed regulatory critiques, jurisprudence updates, and practical workflows for financial controllers and founders.</p>
+</div>
+<!-- Bento-Styled Analytical Articles Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Lead Article (Span 7) -->
+<article class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm rounded uppercase font-semibold">Income Tax • Sec 115BAC</span>
+<span class="font-label-sm text-label-sm text-outline">12 Min Deep Read</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary hover:text-secondary transition-colors cursor-pointer">
+              Old vs New Tax Regime for FY 2024-25: A Detailed Comparative Analysis for Salaried Taxpayers
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              With the amendments introduced under the Finance Act 2024, the default regime under Section 115BAC provides an expanded rebate threshold up to ₹7 Lakhs net taxable income and enhanced Standard Deduction of ₹75,000. We examine breakeven thresholds for taxpayers with high HRA and Section 24 interest deductions, mapping exact inflection curves across CTC brackets ranging from ₹12 LPA to ₹50 LPA.
+            </p>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-2 mt-2">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+<span>Critical Breakeven Metric:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                For a gross income of ₹15,00,000, if total itemized chapter VI-A deductions exceed <strong>₹3,75,000</strong>, the Old Regime preserves fiduciary advantage; below this mark, Section 115BAC ensures greater post-tax liquidity.
+              </p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Author: Afrid Syed</span>
+<span>•</span>
+<span>Direct Tax Practice</span>
+</div>
+<button class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary hover:text-secondary font-semibold">
+<span>Read Full Breakdown</span>
+<span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</article>
+<!-- Secondary Article (Span 5) -->
+<article class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm rounded uppercase font-semibold">GST Litigation &amp; Audit</span>
+<span class="font-label-sm text-label-sm text-outline">8 Min Read</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary hover:text-secondary transition-colors cursor-pointer">
+              Input Tax Credit Restrictions under Rule 36(4) &amp; GSTR-2B Matching Essentials
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Navigating rigid static auto-population in GSTR-2B vs dynamic GSTR-2A. Addressing supplier default liabilities under Section 16(2)(aa) and mitigation strategies against automatic Rule 88B interest scrutiny notices.
+            </p>
+<div class="border-l-2 border-secondary pl-3 py-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic">
+                "Zero provisional credit is permissible post the 100% strict matching mandate. Real-time ERP automated reconciliation is mandatory."
+              </p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">CBIC Rulebook Series</span>
+<button class="inline-flex items-center gap-1 font-label-lg text-label-lg text-primary hover:text-secondary font-semibold">
+<span>Access Guide</span>
+<span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</button>
+</div>
+</article>
+<!-- Article 3 (Span 4) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm rounded font-semibold uppercase">Penalty Defense</span>
+<span class="font-label-sm text-label-sm text-outline">6 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors cursor-pointer">
+              Common TDS Defaults: Avoiding Section 201(1A) Interest &amp; 234E Fees
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              A comprehensive review of late deductions, non-deductions under 194C/194J/194Q, and how to rectify uncredited challans on TRACES before quarterly notice generation.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-data-tabular text-data-tabular text-outline">Form 26Q / 24Q</span>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary font-semibold">
+<span>View Checklist</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Article 4 (Span 4) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm rounded font-semibold uppercase">Corporate Payroll</span>
+<span class="font-label-sm text-label-sm text-outline">7 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors cursor-pointer">
+              Payroll Compliance 101: PF, PT, and ESI Thresholds for Growing Startups
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              From 20+ employee triggers under the EPF Act to ₹21,000 wage limits under ESIC. Practical structural guidance on CTC salary component design for minimal compliance exposure.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-data-tabular text-data-tabular text-outline">Labour Laws Act</span>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary font-semibold">
+<span>View Structure</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Article 5 (Span 4) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded font-semibold uppercase">Freelance &amp; Practice</span>
+<span class="font-label-sm text-label-sm text-outline">5 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors cursor-pointer">
+              Presumptive Taxation u/s 44ADA for Consultants: Benefits &amp; Traps
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Declaring 50% profits up to the ₹75 Lakh gross receipts threshold. Managing advance tax deadlines in single installments and cross-border remittance documentation.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-data-tabular text-data-tabular text-outline">Direct Tax Codes</span>
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary font-semibold">
+<span>Analyze Trapdoor</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- High-Impact Newsletter / Statutory Bulletin Subscription -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="bg-primary text-on-primary rounded-xl p-space-lg md:p-space-xl relative overflow-hidden shadow-lg">
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-3xl space-y-space-md relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary-container text-secondary-fixed text-label-sm font-label-sm font-semibold uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">notifications_active</span>
+<span>Statutory Alert Transmission</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-surface-bright">
+            Never miss a statutory due date or tax update.
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-variant">
+            Subscribe to STA Consultancy's compliance bulletin. Receive curated CBDT circulars, CBIC rate modifications, judicial case summaries, and calendar deadline reminders directly to your inbox.
+          </p>
+<!-- Email Subscription Input -->
+<form class="flex flex-col sm:flex-row gap-space-sm pt-space-xs" id="newsletterForm" onsubmit="event.preventDefault(); handleSubscribe();">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-surface-variant">mail</span>
+<input class="w-full pl-11 pr-4 py-3 bg-primary-container text-surface-bright placeholder-surface-variant rounded text-body-md font-body-md outline-none focus:ring-2 focus:ring-secondary-fixed" id="subscriberEmail" placeholder="Enter corporate or business email..." required="" type="email"/>
+</div>
+<button class="px-space-lg py-3 bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded font-semibold hover:bg-secondary-fixed transition-colors shadow-sm flex items-center justify-center gap-2 shrink-0" type="submit">
+<span>Subscribe to Bulletin</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+<div class="hidden p-space-sm bg-surface-container-low text-primary rounded-lg text-body-sm font-body-sm flex items-center gap-2" id="subscriptionNotification">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span>Transmission Registered: You have been enrolled in the STA Regulatory Broadcast. Managed under the fiduciary authority of Afrid Syed.</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-lg pt-space-xs text-label-sm font-label-sm text-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">security</span>
+<span>Zero-Spam Fiduciary Guarantee</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">event_note</span>
+<span>Fortnightly Frequency</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">verified</span>
+<span>Vetted by Registered Practitioners</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Tax Calculator Script -->
+<script>
+    function calculateTaxes() {
+      const gross = Math.max(0, parseFloat(document.getElementById('grossSalary').value) || 0);
+      const sec80c = Math.min(150000, Math.max(0, parseFloat(document.getElementById('sec80C').value) || 0));
+      const sec80d = Math.max(0, parseFloat(document.getElementById('sec80D').value) || 0);
+      const hraInterest = Math.max(0, parseFloat(document.getElementById('hraHomeLoan').value) || 0);
+
+      // Old Regime Calculation:
+      // Standard deduction: 50,000
+      const oldStdDeduction = 50000;
+      const totalOldDeductions = oldStdDeduction + sec80c + sec80d + hraInterest;
+      const oldTaxable = Math.max(0, gross - totalOldDeductions);
+
+      let oldTax = 0;
+      if (oldTaxable > 1000000) {
+        oldTax = 112500 + (oldTaxable - 1000000) * 0.30;
+      } else if (oldTaxable > 500000) {
+        oldTax = 12500 + (oldTaxable - 500000) * 0.20;
+      } else if (oldTaxable > 250000) {
+        oldTax = (oldTaxable - 250000) * 0.05;
+      }
+      // Section 87A rebate for Old Regime (up to 5L taxable)
+      if (oldTaxable <= 500000) {
+        oldTax = 0;
+      }
+      if (oldTax > 0) {
+        oldTax += oldTax * 0.04; // 4% Cess
+      }
+
+      // New Regime Calculation (Finance (No.2) Act 2024 / FY 2024-25):
+      // Standard deduction: 75,000
+      const newStdDeduction = 75000;
+      const newTaxable = Math.max(0, gross - newStdDeduction);
+
+      let newTax = 0;
+      // Slabs:
+      // 0 - 3L: Nil
+      // 3L - 7L: 5%
+      // 7L - 10L: 10%
+      // 10L - 12L: 15%
+      // 12L - 15L: 20%
+      // > 15L: 30%
+      if (newTaxable > 1500000) {
+        newTax = 140000 + (newTaxable - 1500000) * 0.30;
+      } else if (newTaxable > 1200000) {
+        newTax = 80000 + (newTaxable - 1200000) * 0.20;
+      } else if (newTaxable > 1000000) {
+        newTax = 50000 + (newTaxable - 1000000) * 0.15;
+      } else if (newTaxable > 700000) {
+        newTax = 20000 + (newTaxable - 700000) * 0.10;
+      } else if (newTaxable > 300000) {
+        newTax = (newTaxable - 300000) * 0.05;
+      }
+
+      // Section 87A rebate for New Regime (Taxable up to 7 Lakhs pays zero)
+      if (newTaxable <= 700000) {
+        newTax = 0;
+      }
+      if (newTax > 0) {
+        newTax += newTax * 0.04; // 4% Cess
+      }
+
+      // Rounding
+      oldTax = Math.round(oldTax);
+      newTax = Math.round(newTax);
+
+      // Render Values
+      document.getElementById('oldTaxAmount').innerText = '₹' + oldTax.toLocaleString('en-IN');
+      document.getElementById('oldTaxableIncome').innerText = 'Taxable: ₹' + oldTaxable.toLocaleString('en-IN');
+
+      document.getElementById('newTaxAmount').innerText = '₹' + newTax.toLocaleString('en-IN');
+      document.getElementById('newTaxableIncome').innerText = 'Taxable: ₹' + newTaxable.toLocaleString('en-IN');
+
+      // Differential Logic
+      const diff = Math.abs(oldTax - newTax);
+      const recTitle = document.getElementById('recommendationTitle');
+      const badge = document.getElementById('savingsBadge');
+      const diffText = document.getElementById('savingsDifferential');
+
+      if (newTax < oldTax) {
+        recTitle.innerText = 'New Regime is More Favorable';
+        badge.innerText = 'Save ₹' + diff.toLocaleString('en-IN');
+        badge.className = 'px-3 py-1 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded font-semibold uppercase';
+        diffText.innerText = 'Advantage New Regime: ₹' + diff.toLocaleString('en-IN');
+      } else if (oldTax < newTax) {
+        recTitle.innerText = 'Old Regime is More Favorable';
+        badge.innerText = 'Save ₹' + diff.toLocaleString('en-IN');
+        badge.className = 'px-3 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm rounded font-semibold uppercase';
+        diffText.innerText = 'Advantage Old Regime: ₹' + diff.toLocaleString('en-IN');
+      } else {
+        recTitle.innerText = 'Identical Tax Liability';
+        badge.innerText = 'Neutral Selection';
+        badge.className = 'px-3 py-1 bg-outline-variant text-primary font-label-sm text-label-sm rounded font-semibold uppercase';
+        diffText.innerText = 'Differential: ₹0';
+      }
+
+      // Update Bar Widths
+      const totalComparison = (oldTax + newTax) || 1;
+      const oldPct = Math.round((oldTax / totalComparison) * 100);
+      const newPct = 100 - oldPct;
+      document.getElementById('barOldRegime').style.width = oldPct + '%';
+      document.getElementById('barNewRegime').style.width = newPct + '%';
+    }
+
+    // Attach Listeners
+    ['grossSalary', 'sec80C', 'sec80D', 'hraHomeLoan'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', calculateTaxes);
+      }
+    });
+
+    // Run Initial Calculation
+    calculateTaxes();
+
+    // Subscribe Notification Mock
+    function handleSubscribe() {
+      const emailInput = document.getElementById('subscriberEmail');
+      const box = document.getElementById('subscriptionNotification');
+      if (emailInput && emailInput.value) {
+        box.classList.remove('hidden');
+        emailInput.value = '';
+      }
+    }
+
+    // Download mock event
+    document.getElementById('downloadCalendarBtn').addEventListener('click', function() {
+      alert('STA Compliance Calendar for the ongoing statutory month prepared by Afrid Syed is initiating download.');
+    });
+  </script>
+</div></main><footer class="w-full bg-primary text-on-primary pt-space-xl pb-space-lg"><div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-primary-container"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm mb-space-xs"><img alt="STA Consultancy Logo" class="h-8 w-auto object-contain brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB713DPaZ-qJD2ugynykl__jlq106ovHyKXM52xV3-9N6QK58kZzY4dftXghGWhC0QomYeTyiE28mifQ5WcPqye5m0bhZH30TSH_miTLDbvN6ZEHVl_l5EyPPuU2TLT9w3UhpT4sR-jh1g1s266pYyffUlg9tujAasGJsI2caNyo1CGtGzX-yJn2eTosbnT5mHAPp-u1VcP0vKK1CuQTvWYzkbcDvqJP60LISQpjM3h0zJBtRkckgkD"/><span class="font-headline-sm text-headline-sm text-surface-bright">STA Consultancy</span></div><p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Fiduciary tax planning, institutional statutory audits, and end-to-end GST compliance tailored for enterprises, proprietorships, and high-net-worth individuals.</p><div class="mt-space-sm bg-primary-container p-space-sm rounded-lg border-l-2 border-secondary-container"><p class="font-label-sm text-label-sm text-secondary-fixed">Proprietorship Authority</p><p class="font-label-lg text-label-lg text-surface-bright">Prop: Afrid Syed</p></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Core Practice Areas</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant"><li><a class="hover:text-surface-bright transition-colors" data-path="income-tax-advisory" href="#">Income Tax Filing &amp; Litigation</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="gst-compliance" href="#">GST Registration &amp; Returns</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="tds-tcs-provisions" href="#">TDS &amp; TCS Statutory Filing</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="payroll-accounting" href="#">Payroll &amp; Statutory Registers</a></li><li><a class="hover:text-surface-bright transition-colors" data-path="corporate-bookkeeping" href="#">Ledger &amp; Corporate Bookkeeping</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Contact Touchpoints</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">call</span><div><p class="text-surface-bright font-data-tabular text-data-tabular">7989922049</p><p class="font-label-sm text-label-sm text-outline-variant">Direct Advisory Desk</p></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">mail</span><div><p class="text-surface-bright font-data-tabular text-data-tabular">staconsultancyservices@gmail.com</p><p class="font-label-sm text-label-sm text-outline-variant">Confidential Documentation Desk</p></div></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary-container text-body-md font-body-md">schedule</span><div><p class="text-surface-bright font-body-sm text-body-sm">Mon - Sat: 09:30 AM - 07:00 PM</p><p class="font-label-sm text-label-sm text-outline-variant">Sunday: Statutory Deadlines Priority</p></div></div></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-secondary-fixed mb-space-xs">Regulatory Status</h4><p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Registered Indian Tax Practitioner advisory operations adhering to CBDT &amp; CBIC guidelines. High-security data transmission enabled.</p><div class="mt-space-xs"><a class="w-full text-center inline-block py-2.5 px-space-md bg-secondary-container text-on-secondary-container font-label-lg text-label-lg rounded-lg hover:bg-secondary-fixed transition-colors font-semibold" data-path="consultation-booking" href="#">Schedule Consultation</a></div></div></div><div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-label-sm text-label-sm text-outline-variant text-center md:text-left">© 2025 STA Consultancy. All Rights Reserved. Proprietary Practice: Afrid Syed. Financial figures subject to statutory revision under the Income Tax Act, 1961.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm text-surface-variant"><a class="hover:text-surface-bright transition-colors" data-path="statutory-disclaimer" href="#">Disclaimer</a><span class="text-outline-variant">•</span><a class="hover:text-surface-bright transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-outline-variant">•</span><a class="hover:text-surface-bright transition-colors" data-path="terms-of-engagement" href="#">Terms of Engagement</a></div></div></footer></body></html>
